@@ -1,0 +1,181 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FriendFinder</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Jumbotron Header -->
+    <section class="banner">
+        <div class="jumbotron jumbotron-fluid bg-info">
+            <div class="container">
+                <h1 class="display-4"><strong>Friend Finder</strong></h1>
+                <p class="lead">Get started with the questionaire below.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Survey Section -->
+    <section>
+        <div class="container">
+            <h2><strong>Survey Questions</strong></h2>
+            <hr>
+            <div>
+                <h3>Basic Information</strong>
+                    <h5>Name (Required)</h5>
+                    <input type="text" id="name" class="form-control" required>
+
+                    <h5>Link to Photo Image (Required)</h5>
+                    <input type="text" id="photo" class="form-control" required>
+            </div>
+
+            <hr>
+
+            <h3>Select the answer that best fits your personality for each question below</h3>
+
+            <br>
+
+            <h4><strong>Question 1</strong></h4>
+            <h5>I am energized by social situations.</h5>
+            <select class="selection" id="question1">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+
+            <h4><strong>Question 2</strong></h4>
+            <h5>When on vacation, I like to plan out all of my activities.</h5>
+            <select class="selection" id="question2">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+
+            <h4><strong>Question 3</strong></h4>
+            <h5>I prefer to take on a leadership role.</h5>
+            <select class="selection" id="q3">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+
+            <h4><strong>Question 4</strong></h4>
+            <h5>I make my decisions based on logic over emotion.</h5>
+            <select class="selection" id="q4">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+
+            <h4><strong>Question 5</strong></h4>
+            <h5>I enjoy tackling complex problems.</h5>
+            <select class="selection" id="q5">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+
+            <h4><strong>Question 6</strong></h4>
+            <h5>I accomplish tasks well before their deadlines.</h5>
+            <select class="selection" id="q6">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+
+            <h4><strong>Question 7</strong></h4>
+            <h5>I pay attention to world news and events.</h5>
+            <select class="selection" id="q7">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h4><strong>Question 8</strong></h4>
+            <h5>I believe in clear rules and guidelines.</h5>
+            <select class="selection" id="q8">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h4><strong>Question 9</strong></h4>
+            <h5>I believe that people are generally good.</h5>
+            <select class="selection" id="q9">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h4><strong>Question 10</strong></h4>
+            <h5>I have a wide variety of hobbies and interests.</h5>
+            <select class="selection" id="q10">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <br>
+            <br>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-lg btn-block bg-dark" id="submit"><i
+                    class="fa fa-check-circle" aria-hidden="true"></i>
+                Submit Your Survey</button>
+
+            <!-- Footer -->
+            <hr>
+            <div class="footer">
+                <div class="container">
+                    <p>Find A Friend Inc.</p>
+                </div>
+            </div>
+    </section>
+</body>
+
+</html>
