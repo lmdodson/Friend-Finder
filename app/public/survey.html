@@ -32,10 +32,10 @@
             <div>
                 <h3>Basic Information</strong>
                     <h5>Name (Required)</h5>
-                    <input type="text" id="name" class="form-control" value="George" required>
+                    <input type="text" id="name" class="form-control" placeholder="George" required>
 
                     <h5>Link to Photo Image (Required)</h5>
-                    <input type="text" id="photo" class="form-control" value="George" required>
+                    <input type="text" id="photo" class="form-control" placeholder="George" required>
             </div>
 
             <hr>
@@ -205,32 +205,57 @@
             var currentURL = window.location.origin;
             console.log(currentURL)
 
+            // Form validation
+            var isValid = true;
 
-            // grab user input and create new object
-            var newFriend = {
-                name: $("#name").val().trim(),
-                photo: $("#photo").val(),
-                scores: [
-                    $("#question1").val(),
-                    $("#question2").val(),
-                    $("#question3").val(),
-                    $("#question4").val(),
-                    $("#question5").val(),
-                    $("#question6").val(),
-                    $("#question7").val(),
-                    $("#question8").val(),
-                    $("#question9").val(),
-                    $("#question10").val()
-                ]
-            }
-            // console.log(newFriend)
-
-            // pass the user object to the api
-            $.post(currentURL + "/api/friends", newFriend)
-                .then(function (data) {
-                    console.log("survey.html", data);
-                    alert("Adding friend...")
+            function validateForm() {
+                // make sure all fields have data
+                $(".form-control").each(function () {
+                    if ($(this).val() == "") {
+                        isValid = false;
+                    }
                 });
+
+                $(".selection").each(function () {
+
+                    if ($(this).val() == "") {
+                        isValid = false;
+                    }
+                });
+                // return isValid;
+            }
+
+            validateForm();
+            console.log(isValid)
+            if (isValid == true) {
+                // grab user input and create new object
+                var newFriend = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#question1").val(),
+                        $("#question2").val(),
+                        $("#question3").val(),
+                        $("#question4").val(),
+                        $("#question5").val(),
+                        $("#question6").val(),
+                        $("#question7").val(),
+                        $("#question8").val(),
+                        $("#question9").val(),
+                        $("#question10").val()
+                    ]
+                }
+                // console.log(newFriend)
+
+                // pass the user object to the api
+                $.post(currentURL + "/api/friends", newFriend)
+                    .then(function (data) {
+                        console.log("survey.html", data);
+                        alert("Adding friend...")
+                    });
+            } else {
+                alert("Please answer all questions before continuing!")
+            }
         });
     </script>
 
